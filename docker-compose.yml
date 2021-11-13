@@ -1,0 +1,10 @@
+version: "3"
+services:
+  simple:
+    image: jupyter/base-notebook
+    build: .
+    volumes:
+      - ./jupyter:/home/jovyan/work
+    ports:
+      - "8989:8888"
+    tty: true
